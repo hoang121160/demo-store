@@ -1,0 +1,8 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡½ƒĞûÿÿÿÿ8ŒøëÑî1J$f2a69e39-5244-48f6-b2c1-4c4f1f843a1a
+¾
+java:S4601"{Reorder the URL patterns from most to less specific, the pattern "/users/forgot-password" should occurs before "/users/**".(–˜¿¹8šçÈûî1J$ec5705fa-9121-466e-b564-02ca4c4520f0
+Ç
+java:S4601"ƒReorder the URL patterns from most to less specific, the pattern "/users/{userId}/changePassword" should occurs before "/users/**".(ş‹ß¾8›çÈûî1J$33323e47-a6ca-431d-8882-0dc0410651a2
+¹
+java:S4601"qReorder the URL patterns from most to less specific, the pattern "/users/login" should occurs before "/users/**".(œí•Ïüÿÿÿÿ8œçÈûî1J$5c590717-c6ad-47a4-bb23-95372dddd8b6

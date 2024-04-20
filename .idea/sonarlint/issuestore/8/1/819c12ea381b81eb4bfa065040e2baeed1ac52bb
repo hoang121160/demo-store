@@ -1,0 +1,11 @@
+
+°
+java:S1192V"mDefine a constant instead of duplicating this literal "KhÃ´ng tÃ¬m tháº¥y ngÆ°á»i dÃ¹ng vá»›i id: " 4 times.(ƒÍ”ˆ8Á§ŒÜî1J$2920d797-a00f-4910-9bbb-fd33bffd26a5
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ÎÕïüÿÿÿÿ8Ì§ŒÜî1J$179b5fa3-a0f4-4d7f-aaad-b055b58897ed
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(ğ²á§ÿÿÿÿÿ8É¢úî1J$8a1e6e4c-9062-416c-b90c-586bff5b3bce
+
+java:S5998G"LRefactor this repetition that can lead to a stack overflow for large inputs.(®’ÕÔ8õ¨ŒÜî1J$d979b20f-5415-4caf-9394-2dd57b5b0da4
+„	java:S125©"<This block of commented-out lines of code should be removed.(Õ”‹Ìÿÿÿÿÿ8·©ŒÜî1J$21357155-d257-4e5a-8e95-917f709b134a
+	java:S125Ô"<This block of commented-out lines of code should be removed.(õÆÌæ8¸©ŒÜî1J$3ce21844-82f9-490f-9426-3bbda1a94f51
+a
+java:S2119ù"Save and re-use this "Random".(¼İÅf8Ê©ŒÜî1J$0329f3b2-23dd-4969-8b6e-cc64e3b4bf72

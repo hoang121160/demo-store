@@ -1,0 +1,10 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒç…Ÿøÿÿÿÿ
+Z
+java:S1854"?Remove this useless assignment to local variable "newCategory".(ù¨‹ûÿÿÿÿ
+[
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(Ä¶­üÿÿÿÿ
+K
+java:S1481"0Remove this unused "newCategory" local variable.(ù¨‹ûÿÿÿÿ
+[
+java:S4684*"@Replace this persistent entity with a simple POJO or DTO object.(Ôš¢çıÿÿÿÿ

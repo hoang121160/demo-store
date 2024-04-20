@@ -1,0 +1,8 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒç…Ÿøÿÿÿÿ
+[
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(Ú“Ç¾üÿÿÿÿ
+[
+java:S4684>"@Replace this persistent entity with a simple POJO or DTO object.(ïàÑÞÿÿÿÿÿ
+i
+java:S1128"NRemove this unused import 'com.example.GameStore.entity.ResetPasswordRequest'.(Ø¢ô¾úÿÿÿÿ
