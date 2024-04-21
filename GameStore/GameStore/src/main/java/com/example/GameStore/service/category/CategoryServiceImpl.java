@@ -44,7 +44,6 @@ public class CategoryServiceImpl implements CategoryService {
         }
         Category existingCategory = categoryOptional.get();
         existingCategory.setCategoryName(updateCategory.getCategoryName());
-        existingCategory.setDescription(updateCategory.getDescription());
         return categoryRepository.save(existingCategory);
     }
 

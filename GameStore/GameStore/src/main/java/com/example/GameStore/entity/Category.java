@@ -19,7 +19,4 @@ public class Category {
     @Column(nullable = false)
     private String categoryName;
 
-    @Column(columnDefinition = "TEXT")
-    private String description;
-
 }

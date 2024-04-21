@@ -22,19 +22,18 @@ public class Order {
     @JoinColumn(name = "userId", nullable = false)
     private User user;
 
-    private double totalAmount;
-
     @Enumerated(EnumType.STRING)
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate;
 
-    @Column(length = 20)
+    @ManyToOne
+    @JoinColumn(name = "productId", nullable = false)
+    private Product product;
+
+    @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 
     @Enumerated(EnumType.STRING)
-    @Column(length = 20)
     private PaymentMethod paymentMethod;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<OrderDetail> orderDetails;
 }

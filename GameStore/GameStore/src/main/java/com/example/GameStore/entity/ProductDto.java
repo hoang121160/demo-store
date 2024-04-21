@@ -13,6 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 public class ProductDto {
     private String productName;
+    private String accountName;
+    private String accountPassword;
     private double price;
     private String description;
     private List<String> imageUrls;

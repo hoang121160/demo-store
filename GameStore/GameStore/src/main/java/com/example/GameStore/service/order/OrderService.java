@@ -1,22 +1,23 @@
 package com.example.GameStore.service.order;
 
 import com.example.GameStore.entity.Order;
-import com.example.GameStore.entity.OrderDetail;
 import com.example.GameStore.entity.OrderStatus;
 import com.example.GameStore.entity.PaymentMethod;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public interface OrderService {
-    Order createOrder(Order order, List<OrderDetail> orderDetails);
+    Order createOrder(Long productId, Long userId);
 
     List<Order> getAllOrders();
 
     Order getOrderById(Long orderId);
 
-    void updateOrderStatus(Long orderId, OrderStatus status);
+    Order updateOrderStatus(Long orderId, PaymentMethod paymentMethod);
 
     void deleteOrderById(Long orderId);
-    Order checkoutOrder(Long orderId, PaymentMethod paymentMethod);
+
+    void confirmationOrder(Long orderId);
 }

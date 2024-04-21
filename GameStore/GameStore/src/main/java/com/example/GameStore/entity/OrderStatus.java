@@ -1,7 +1,8 @@
 package com.example.GameStore.entity;
 
 public enum OrderStatus {
-    PROCESSING,// dang xu ly
-    COMPLETED, // hoan thanh
-    CANCELLED // da huy
+    CHO_THANH_TOAN,
+    DANG_THANH_TOAN,
+    DA_THANH_TOAN,
+    DA_HUY
 }

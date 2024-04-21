@@ -1,40 +1,57 @@
 package com.example.GameStore.service.order;
 
-import com.example.GameStore.entity.Order;
-import com.example.GameStore.entity.OrderDetail;
-import com.example.GameStore.entity.OrderStatus;
-import com.example.GameStore.entity.PaymentMethod;
-import com.example.GameStore.repository.OrderDetailRepository;
+import com.example.GameStore.entity.*;
+import com.example.GameStore.exeption.InvalidException;
 import com.example.GameStore.repository.OrderRepository;
-import com.example.GameStore.service.orderDetail.OrderDetailService;
+import com.example.GameStore.repository.ProductRepository;
+import com.example.GameStore.repository.UserRepository;
+import com.example.GameStore.service.emailMessage.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
+
 @Service
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
-    @Autowired
-    private final OrderDetailService orderDetailService;
-    public OrderServiceImpl(OrderRepository orderRepository, OrderDetailService orderDetailService) {
+    private final UserRepository userRepository;
+    private final EmailService emailService;
+    private final ProductRepository productRepository;
+
+    public OrderServiceImpl(OrderRepository orderRepository,
+                            UserRepository userRepository,
+                            EmailService emailService,
+                            ProductRepository productRepository) {
         this.orderRepository = orderRepository;
-        this.orderDetailService = orderDetailService;
+        this.userRepository = userRepository;
+        this.emailService = emailService;
+        this.productRepository = productRepository;
     }
 
     @Override
-    public Order createOrder(Order order, List<OrderDetail> orderDetails) {
+    public Order createOrder(Long productId, Long userId) {
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        String currentPrincipalName = authentication.getName();
+//        User user = userRepository.findByUsername(currentPrincipalName)
+//                .orElseThrow(()-> new EntityNotFoundException("User not found!"));
+        User user = userRepository.findById(userId)
+                .orElseThrow(()-> new EntityNotFoundException("User not found!"));
+
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new EntityNotFoundException("Product not found !"));
+        Order order = new Order();
+        order.setUser(user);
+        order.setProduct(product);
         order.setOrderDate(new Date());
-        order.setOrderStatus(OrderStatus.PROCESSING);
+        order.setOrderStatus(OrderStatus.CHO_THANH_TOAN);
         order.setPaymentMethod(null);
-        Order savedOrder = orderRepository.save(order);
-        for (OrderDetail orderDetail : orderDetails) {
-            orderDetail.setOrder(savedOrder);
-            orderDetailService.createOrderDetail(orderDetail);
-        }
-        return savedOrder;
+        return orderRepository.save(order);
     }
 
     @Override
@@ -44,29 +61,52 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order getOrderById(Long orderId) {
-        return orderRepository.findById(orderId).orElseThrow(() -> new IllegalArgumentException("Invalid order Id:"));
+        return orderRepository.findById(orderId)
+                .orElseThrow(() -> new EntityNotFoundException("Order not found !"));
     }
-
 
     @Override
-    public void updateOrderStatus(Long id, OrderStatus status) {
-
-
+    public Order updateOrderStatus(Long orderId, PaymentMethod paymentMethod) {
+        Order order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new EntityNotFoundException("Order not found !"));
+        order.setOrderStatus(OrderStatus.DANG_THANH_TOAN);
+        order.setPaymentMethod(paymentMethod);
+        return orderRepository.save(order);
     }
+
 
     @Override
     public void deleteOrderById(Long orderId) {
         if (!orderRepository.existsById(orderId)) {
-            throw new EntityNotFoundException("Order not found");
+            throw new EntityNotFoundException("Order not found !");
         }
         orderRepository.deleteById(orderId);
     }
 
-
     @Override
-    public Order checkoutOrder(Long orderId, PaymentMethod paymentMethod) {
-        Order order = getOrderById(orderId);
-        order.setPaymentMethod(paymentMethod);
-        return orderRepository.save(order);
+    public void confirmationOrder(Long orderId) {
+        Order order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new EntityNotFoundException("Order not found !"));
+        order.setOrderStatus(OrderStatus.DA_THANH_TOAN);
+        sendProductInfoToUser(order);
     }
+
+    private void sendProductInfoToUser(Order order) {
+        Product product = order.getProduct();
+        User user = order.getUser();
+
+        // send email
+        EmailMessage emailMessage = new EmailMessage();
+        emailMessage.setTo(user.getEmail());
+        emailMessage.setSubject("Thông tin sản phẩm đã mua");
+        emailMessage.setBody("Xin chào " + user.getUsername() + ",\n\n"
+                + "Dưới đây là thông tin tài khoản của sản phẩm bạn đã mua:\n\n"
+                + "Tên tài khoản: " + product.getAccountName() + "\n"
+                + "Mật khẩu: " + product.getAccountPassword() + "\n\n"
+                + "Cảm ơn bạn đã mua hàng!\n"
+                + "Trân trọng,\n"
+                + "By Hoang Khong");
+        emailService.sendEmail(emailMessage);
+    }
+
 }

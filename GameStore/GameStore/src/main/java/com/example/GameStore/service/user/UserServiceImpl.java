@@ -233,7 +233,7 @@ public class UserServiceImpl implements UserService {
             EmailMessage emailMessage = new EmailMessage();
             emailMessage.setTo(email);
             emailMessage.setSubject("Reset password");
-            emailMessage.setBody("Your new password id: " + newPassword);
+            emailMessage.setBody("Your new password: " + newPassword);
             emailService.sendEmail(emailMessage);
         } else {
             throw new EntityNotFoundException("Email không tồn tại !");
