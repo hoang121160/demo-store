@@ -1,0 +1,18 @@
+
+Ž
+java:S1192A"RDefine a constant instead of duplicating this literal "Order not found !" 4 times.(ËÚ¾­J$f10e6dd6-2448-44b7-aeb3-55648419f463
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ß•íJ$3cdb71a4-2031-4dd7-b939-50aa4db7db26
+w	java:S125'"<This block of commented-out lines of code should be removed.(ÿ®ùéJ$d70ab98e-032b-4e71-b552-96f13fd503e5
+ˆ
+java:S1128"LRemove this unused import 'com.example.GameStore.exeption.InvalidException'.(ÕðÚÙJ$979033e1-6ff4-4469-83f2-75918e33fc8d
+”
+java:S1128	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸ÎùÿÿÿÿJ$d8408f0b-e718-4f01-9827-ad79b211dd15
+ƒ
+java:S1128
+"GRemove this unused import 'org.springframework.mail.SimpleMailMessage'.(€·ÊŒJ$ad075589-c32e-47c0-b7d6-9e15db438add
+‰
+java:S1128"MRemove this unused import 'org.springframework.mail.javamail.JavaMailSender'.(ÕÃ›J$4aa45d6a-2809-44c9-9699-b5c698e37c57
+‰
+java:S1128"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñýÓ“J$5de7bb8a-1868-411a-b1c7-4869b9b24c94
+˜
+java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæëJ$6de79ce3-cf6f-4806-acf3-4001a4904805

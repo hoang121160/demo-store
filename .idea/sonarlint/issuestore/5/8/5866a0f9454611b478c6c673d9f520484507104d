@@ -1,8 +1,14 @@
 
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡½ƒÐûÿÿÿÿ
-‘
-java:S4601"{Reorder the URL patterns from most to less specific, the pattern "/users/forgot-password" should occurs before "/users/**".(–˜¿¹
-š
-java:S4601"ƒReorder the URL patterns from most to less specific, the pattern "/users/{userId}/changePassword" should occurs before "/users/**".(þ‹ß¾
+–
+java:S4601"{Reorder the URL patterns from most to less specific, the pattern "/users/forgot-password" should occurs before "/users/**".(çÛÿÈúÿÿÿÿ
+Ÿ
+java:S4601"ƒReorder the URL patterns from most to less specific, the pattern "/users/{userId}/changePassword" should occurs before "/users/**".(çÛÿÈúÿÿÿÿ
 Œ
-java:S4601"qReorder the URL patterns from most to less specific, the pattern "/users/login" should occurs before "/users/**".(œí•Ïüÿÿÿÿ
+java:S4601"qReorder the URL patterns from most to less specific, the pattern "/users/login" should occurs before "/users/**".(ë¡Çìþÿÿÿÿ
+™
+java:S4601"~Reorder the URL patterns from most to less specific, the pattern "/orders/update-status/**" should occurs before "/orders/**".(ÖÑŽ‹ûÿÿÿÿ
+’
+java:S4601"wReorder the URL patterns from most to less specific, the pattern "/orders/delete/**" should occurs before "/orders/**".(Üø˜àüÿÿÿÿ
+“
+java:S4601"xReorder the URL patterns from most to less specific, the pattern "/orders/confirm/**" should occurs before "/orders/**".(Üø˜àüÿÿÿÿ
