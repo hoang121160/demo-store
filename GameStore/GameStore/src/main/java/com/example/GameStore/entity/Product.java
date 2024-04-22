@@ -35,6 +35,9 @@ public class Product {
     @ElementCollection
     private List<String> imageUrls;
 
+    @Column(nullable = false)
+    private boolean sold;
+
     @ManyToOne
     @JoinColumn(name = "categoryId", nullable = false)
     private Category category;

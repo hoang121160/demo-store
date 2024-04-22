@@ -1,18 +1,18 @@
 
-Ž
-java:S1192A"RDefine a constant instead of duplicating this literal "Order not found !" 4 times.(ËÚ¾­J$f10e6dd6-2448-44b7-aeb3-55648419f463
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ß•íJ$3cdb71a4-2031-4dd7-b939-50aa4db7db26
-w	java:S125'"<This block of commented-out lines of code should be removed.(ÿ®ùéJ$d70ab98e-032b-4e71-b552-96f13fd503e5
-ˆ
-java:S1128"LRemove this unused import 'com.example.GameStore.exeption.InvalidException'.(ÕðÚÙJ$979033e1-6ff4-4469-83f2-75918e33fc8d
-”
-java:S1128	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸ÎùÿÿÿÿJ$d8408f0b-e718-4f01-9827-ad79b211dd15
-ƒ
-java:S1128
-"GRemove this unused import 'org.springframework.mail.SimpleMailMessage'.(€·ÊŒJ$ad075589-c32e-47c0-b7d6-9e15db438add
-‰
-java:S1128"MRemove this unused import 'org.springframework.mail.javamail.JavaMailSender'.(ÕÃ›J$4aa45d6a-2809-44c9-9699-b5c698e37c57
-‰
-java:S1128"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñýÓ“J$5de7bb8a-1868-411a-b1c7-4869b9b24c94
+•
+java:S1192V"RDefine a constant instead of duplicating this literal "Order not found !" 4 times.(ËÚ¾­8ç‹Çžð1J$cc07dcbe-daf4-4364-8a0e-ef993434d880
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ß•í8î‹Çžð1J$a8b226d6-281a-4b46-af01-6e6c74bc551f
+~	java:S125+"<This block of commented-out lines of code should be removed.(ÿ®ùé8“ŒÇžð1J$977ce65a-86a5-4c83-a930-67b8ed449fc8
+ƒ	java:S125I"<This block of commented-out lines of code should be removed.(ØÂ×Àúÿÿÿÿ8ÙÊÓžð1J$d123a3e4-9f38-4a5f-bd79-a86ed677a5f5
+„
+java:S1854h"ARemove this useless assignment to local variable "orderOptional".(Òé¾Š8œŒÇžð1J$3f44de9d-f19a-4d98-b3c2-2fc675a4ee73
+u
+java:S1481h"2Remove this unused "orderOptional" local variable.(Òé¾Š8žŒÇžð1J$8e0b9804-c5ca-495e-90c4-4038dcdd6702
+„	java:S125"<This block of commented-out lines of code should be removed.(¾¶¥©ÿÿÿÿÿ8Ú€Óžð1J$9126cb94-9a89-4cad-9a0d-ec81f61c5cd1
 ˜
-java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæëJ$6de79ce3-cf6f-4806-acf3-4001a4904805
+java:S1128	"PRemove this unused import 'org.springframework.scheduling.annotation.Scheduled'.(‚¡®Üûÿÿÿÿ8ÑˆÔžð1J$f01c9038-c45f-4c45-bfff-bc83e4e7dedd
+
+java:S1128
+"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñýÓ“8ÑˆÔžð1J$fadd3d75-994c-435c-b2e1-1d004fcc06bb
+Ÿ
+java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8ÑˆÔžð1J$72c89b21-05b7-489c-9233-d70766bfd4d3

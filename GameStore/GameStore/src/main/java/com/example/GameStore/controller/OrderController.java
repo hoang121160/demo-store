@@ -19,25 +19,29 @@ public class OrderController {
     }
 
     @PostMapping("/create/{productId}/{userId}")
-    public ResponseEntity<Order> createOrder(@PathVariable Long productId, @PathVariable Long userId){
-        Order order = orderService.createOrder(productId,userId);
+    public ResponseEntity<Order> createOrder(@PathVariable Long productId, @PathVariable Long userId) {
+        Order order = orderService.createOrder(productId, userId);
         return new ResponseEntity<>(order, HttpStatus.CREATED);
     }
+
     @GetMapping
-    public ResponseEntity<List<Order>> getAllOrder(){
+    public ResponseEntity<List<Order>> getAllOrder() {
         List<Order> orders = orderService.getAllOrders();
         return new ResponseEntity<>(orders, HttpStatus.OK);
     }
+
     @GetMapping("/{orderId}")
     public ResponseEntity<Order> getOrderById(@PathVariable Long orderId) {
         Order order = orderService.getOrderById(orderId);
         return new ResponseEntity<>(order, HttpStatus.OK);
     }
+
     @PutMapping("/update-status/{orderId}")
-    public ResponseEntity<Order> updateOrderStatus(@PathVariable Long orderId, @RequestParam PaymentMethod paymentMethod) {
+    public ResponseEntity<Order> updateOrderStatus(@PathVariable Long orderId, @RequestBody PaymentMethod paymentMethod) {
         Order updatedOrder = orderService.updateOrderStatus(orderId, paymentMethod);
         return new ResponseEntity<>(updatedOrder, HttpStatus.OK);
     }
+
     @DeleteMapping("/delete/{orderId}")
     public ResponseEntity<Void> deleteOrderById(@PathVariable Long orderId) {
         orderService.deleteOrderById(orderId);

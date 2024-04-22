@@ -64,6 +64,7 @@ public class ProductServiceImpl implements ProductService {
         product.setCategory(productDto.getCategory());
         product.setAccountName(productDto.getAccountName());
         product.setAccountPassword(productDto.getAccountPassword());
+        product.setSold(false);
         return product;
     }
 
